@@ -1,0 +1,12 @@
+CREATE TABLE `payment` (
+  `CusID` int NOT NULL,
+  `phoneno` varchar(25) DEFAULT NULL,
+  `date_of_transaction` date DEFAULT NULL,
+  `address` varchar(25) DEFAULT NULL,
+  `emailid` varchar(25) DEFAULT NULL,
+  `city` varchar(25) DEFAULT NULL,
+  `state` varchar(25) DEFAULT NULL,
+  `zipcode` int NOT NULL,
+  KEY `CusID` (`CusID`),
+  CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`CusID`) REFERENCES `user` (`CusID`)
+)
