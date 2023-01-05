@@ -1,0 +1,15 @@
+CREATE TABLE `product` (
+  `Product_ID` int NOT NULL,
+  `Productname` varchar(45) NOT NULL,
+  `Productimage` varbinary(56) NOT NULL,
+  ` Productprice` double NOT NULL,
+  `Productdescription` varchar(255) NOT NULL,
+  `No_of_Products` int(10) unsigned zerofill DEFAULT NULL,
+  `ProductCategory` int NOT NULL,
+  `  Created_At` timestamp NULL DEFAULT NULL,
+  ` Modified_At` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`Product_ID`),
+  UNIQUE KEY `Product_ID_UNIQUE` (`Product_ID`),
+  KEY `ProductCategory_idx` (`ProductCategory`),
+  CONSTRAINT `ProductCategory` FOREIGN KEY (`ProductCategory`) REFERENCES `p_category` (`ProductCategory`)
+)
