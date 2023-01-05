@@ -1,0 +1,15 @@
+CREATE TABLE `address` (
+  `Address_ID` int NOT NULL,
+  `CusID` int NOT NULL,
+  `Address_Line1` varchar(255) NOT NULL,
+  `Address_Line2` varchar(255) DEFAULT NULL,
+  `City` varchar(255) NOT NULL,
+  `State` varchar(255) NOT NULL,
+  `Pincode` varchar(255) NOT NULL,
+  `Country` varchar(255) NOT NULL,
+  `Created_At` timestamp NULL DEFAULT NULL,
+  `Modified_At` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`Address_ID`),
+  UNIQUE KEY `CusID_UNIQUE` (`CusID`),
+  CONSTRAINT `address_ibfk_1` FOREIGN KEY (`CusID`) REFERENCES `user` (`CusID`)
+)
