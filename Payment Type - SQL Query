@@ -1,0 +1,7 @@
+CREATE TABLE `payment_type_table` (
+  `PaymentID` int NOT NULL,
+  `payment_type` varchar(50),
+  `Created_At` timestamp,
+  `Modified_At` timestamp,
+  PRIMARY KEY (`PaymentID`)
+);
