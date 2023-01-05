@@ -1,0 +1,14 @@
+CREATE TABLE `user` (
+  `CusID` int NOT NULL,
+  `First_Name` char(25) NOT NULL,
+  `Last_Name` char(25) NOT NULL,
+  `Gender` char(15) NOT NULL,
+  `Date of Birth` date NOT NULL,
+  `Mobile Number` int NOT NULL,
+  `Mail ID` varchar(20) NOT NULL,
+  `Password` varchar(25) NOT NULL,
+  `Flag` char(45) boolean,
+  PRIMARY KEY (`CusID`),
+  UNIQUE KEY `CusID_UNIQUE` (`CusID`),
+  UNIQUE KEY `Mail ID_UNIQUE` (`Mail ID`)
+)
