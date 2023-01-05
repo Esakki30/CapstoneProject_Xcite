@@ -1,0 +1,13 @@
+CREATE TABLE `cart` (
+  `Cart ID` int NOT NULL,
+  ` Product_ID` int NOT NULL,
+  `UserID` int NOT NULL,
+  `Created_At` timestamp,
+  ` Modified_At` timestamp,
+  PRIMARY KEY (`Cart ID`),
+  UNIQUE KEY `Cart ID_UNIQUE` (`Cart ID`),
+  UNIQUE KEY ` Product_ID_UNIQUE` (` Product_ID`),
+  KEY `  UserID_id` (`UserID`),
+  CONSTRAINT ` Product_ID` FOREIGN KEY (` Product_ID`) REFERENCES `product` (`Product_ID`),
+  CONSTRAINT `UserID` FOREIGN KEY (`UserID`) REFERENCES `user` (`CusID`)
+)
