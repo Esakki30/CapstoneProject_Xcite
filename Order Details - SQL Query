@@ -1,0 +1,17 @@
+CREATE TABLE `order_details` (
+  `OrderID` int NOT NULL,
+  `CusID` int DEFAULT NULL,
+  `coupon_id` int DEFAULT NULL,
+  `Product_ID` int DEFAULT NULL,
+  `Quantity` tinyint DEFAULT NULL,
+  `total` float DEFAULT NULL,
+  `Created_At` timestamp,
+  `Modified_At` timestamp,
+  PRIMARY KEY (`OrderID`),
+  KEY `Product_ID` (`Product_ID`),
+  KEY `coupon_id` (`coupon_id`),
+  KEY `CusID` (`CusID`),
+  CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`Product_ID`) REFERENCES `product` (`Product_ID`),
+  CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`coupon_id`) REFERENCES `coupon_table` (`coupon_id`),
+  CONSTRAINT `order_details_ibfk_3` FOREIGN KEY (`CusID`) REFERENCES `user` (`CusID`)
+)
