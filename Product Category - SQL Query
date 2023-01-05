@@ -1,0 +1,7 @@
+CREATE TABLE `p_category` (
+  `ProductCategory` int NOT NULL,
+  `Cname` varchar(30) NOT NULL,
+  `Cdescription` varchar(255) NOT NULL,
+  ` Created_At` timestamp NULL DEFAULT NULL,
+  `Modified_At` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`ProductCategory`))
